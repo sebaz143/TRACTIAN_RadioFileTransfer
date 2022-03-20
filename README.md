@@ -85,11 +85,11 @@ Before power on the device, remember to insert an SD card to save the incoming d
 
 The receiver device acts like a gateway. The receiver is listening all the time for incoming packets. This device should not be powered by a battery.
 
-#RESULTS
+# RESULTS
 
 I placed both devices at a distance of 100 meters between them, I used a file of 514460 bytes and sent little packets of 50 bytes to send the full package. I got a transmission time of 4 minutes and sent 10829 chunks. The time on air of the packets is about 3 mS.
 
-#TO DO
+# TO DO
 - Code Refactoring in Espressif IDE.
 - Perform testing & debugging to catch all the error events.
 - Add external watchdog functionality.
