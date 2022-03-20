@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "RadioFileTransfer.h"
 
-#define _TRANSMITER 1
+#define _TRANSMITTER 1
 //#define _RECEIVER 1
 
 #define TIME_IN_DEEP_SLEEP_MODE  5            /* Time ESP32 will go to sleep (in seconds) */
@@ -20,7 +20,7 @@ void setup() {
 
   uint8_t systemStatus = 0;
   
-  #if _TRANSMITER == 1
+  #if _TRANSMITTER == 1
     Serial.print("\n\rTRANSMITER MODE!\n\r");
     systemStatus = tx_file.init(0x94, 0xB9, 0x7E, 0xFA, 0xCF, 0x74);
   #elif _RECEIVER == 1
@@ -36,7 +36,7 @@ void setup() {
     ESP.restart();
   }
   
-  #ifdef _TRANSMITER
+  #ifdef _TRANSMITTER
     //Setup the ESP32 to wake up every 5 seconds
     esp_sleep_enable_timer_wakeup(TIME_IN_DEEP_SLEEP_MODE * 1000000ULL);
     tx_file.sendFile(SD, "/test.txt");
