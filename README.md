@@ -93,3 +93,4 @@ I placed both devices at a distance of 100 meters between them, I used a file of
 - Code Refactoring in Espressif IDE.
 - Perform testing & debugging to catch all the error events.
 - Add external watchdog functionality.
+- Create documentation.
